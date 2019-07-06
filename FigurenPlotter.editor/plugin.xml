@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated plotter -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="FigurPlotter.presentation.FigurPlotterModelWizardID"
+            name="%_UI_FigurPlotterModelWizard_label"
+            class="FigurPlotter.presentation.FigurPlotterModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FigurPlotterModelFile.gif">
+         <description>%_UI_FigurPlotterModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated plotter -->
+      <editor
+            id="FigurPlotter.presentation.FigurPlotterEditorID"
+            name="%_UI_FigurPlotterEditor_label"
+            icon="icons/full/obj16/FigurPlotterModelFile.gif"
+            extensions="figurplotter"
+            class="FigurPlotter.presentation.FigurPlotterEditor"
+            contributorClass="FigurPlotter.presentation.FigurPlotterActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
